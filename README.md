@@ -6,8 +6,9 @@ demo project for grails quick study
 
 Tutorial:
 
-# Download GGTS (https://grails.org/download) and install it
-
+# Download GGTS (Groovy/Grails Tool Suite) and install it
+  http://spring.io/tools/ggts
+  
 # Create a project.
 
   GGTS -> File -> Grails Project
