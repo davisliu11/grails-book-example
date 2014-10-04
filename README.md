@@ -5,6 +5,7 @@ demo project for grails quick study
     
 
 Tutorial:
+
 # Download GGTS (https://grails.org/download) and install it
 
 # Create a project.
@@ -15,9 +16,10 @@ Tutorial:
 # Add the proxy into BuildConfig.groovy
  
    System.setProperty("socket.proxyHost", "192.168.1.4");
+
    System.setProperty("socket.proxyPort", "5678");
 
- '''Change your proxy address accordingly'''
+   Note: Change your proxy address accordingly
 
 # New a Book domain
 
@@ -37,14 +39,15 @@ Tutorial:
 # New a Book Controller with scaffold
 
  class BookController {
-    
     static scaffold = true
  }
 
 # messages.properties 
   
    Book.name = 书名
+
    Book.dateCreated = 入库时间
+
    Book.lastUpdated = 更新时间
  
  
@@ -54,7 +57,7 @@ Tutorial:
 
 # Add plugins in BuildConfig.groovy
 
-        // Spring security to auth users
+                // Spring security to auth users
         compile ":spring-security-core:2.0-RC3"
         
         // Bootstrap kickstart plugin
@@ -64,15 +67,18 @@ Tutorial:
         runtime ':war-exec:1.0.1'
         
  
-  '''Refresh your project through: Right click on project name -> Grails Tools -> Refresh Dependencies''
+  Note: Refresh your project through: Right click on project name -> Grails Tools -> Refresh Dependencies
  
- # Run "s2-quickstart store User Role" and "kickstart" command as the console log tells
+# Run commands below in grails command as the console log tells
  
- # Add static rules in Config.groovy per your case
+ s2-quickstart store User Role
+ kickstart
+
+# Add static rules in Config.groovy per your case
  
       '/**':                              ['ROLE_ADMIN']
  
- # Add default user & group in the Bootstrap.groovy
+# Add default user & group in the Bootstrap.groovy
  
     def init = { servletContext ->
         if (User.count() != 0) {
@@ -87,7 +93,7 @@ Tutorial:
 
         def admin = new User(username: 'admin', password: 'admin').save(flush: true)
         def user = new User(username: 'user', password: 'user').save(flush: true)
-        
+
         UserRole.create(admin, adminRole, true)
         UserRole.create(user, userRole, true)
     }
