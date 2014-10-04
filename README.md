@@ -58,7 +58,7 @@ Tutorial:
 
 # Add plugins in BuildConfig.groovy
 
-                // Spring security to auth users
+        // Spring security to auth users
         compile ":spring-security-core:2.0-RC3"
         
         // Bootstrap kickstart plugin
@@ -68,7 +68,8 @@ Tutorial:
         runtime ':war-exec:1.0.1'
         
  
-  Note: Refresh your project through: Right click on project name -> Grails Tools -> Refresh Dependencies
+  Note: You can find more plugins at https://grails.org/plugins/
+           Remember to refresh your project through: Right click on project name -> Grails Tools -> Refresh Dependencies
  
 # Run commands below in grails command as the console log tells
  
