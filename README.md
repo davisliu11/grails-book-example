@@ -45,11 +45,11 @@ Tutorial:
 
 # messages.properties 
   
-   Book.name = 书名
+ book.name.label = 书名
 
-   Book.dateCreated = 入库时间
+ book.dateCreated.label = 入库时间
 
-   Book.lastUpdated = 更新时间
+ book.lastUpdated.label = 更新时间
  
  
 # Demo Create, Update book and notice the 入库时间 & 更新时间
