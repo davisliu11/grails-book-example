@@ -74,6 +74,7 @@ Tutorial:
 # Run commands below in grails command as the console log tells
  
  s2-quickstart store User Role
+
  kickstart
 
 # Add static rules in Config.groovy per your case
