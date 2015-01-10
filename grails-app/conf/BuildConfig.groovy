@@ -7,6 +7,9 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
+System.setProperty("http.proxyHost", "proxy.mangdin.com");
+System.setProperty("http.proxyPort", "8080");
+
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
     //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
@@ -88,8 +91,5 @@ grails.project.dependency.resolution = {
 		// Jetty embedded server
 		runtime ':war-exec:1.0.1'
     }
-	
-	System.setProperty("socket.proxyHost", "192.168.1.4");
-	System.setProperty("socket.proxyPort", "5678");
 	
 }
